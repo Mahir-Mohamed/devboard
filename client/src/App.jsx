@@ -1,7 +1,7 @@
+import DashboardPage from "./pages/Dashboard/DashboardPage";
+
 function App() {
-  return (
-    <h1>Welcome to DevBoard 🚀</h1>
-  );
+  return <DashboardPage />;
 }
 
 export default App;
