@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 import Navbar from "../../components/Navbar/Navbar";
 import Sidebar from "../../components/Sidebar/Sidebar";
 
@@ -7,18 +9,14 @@ function DashboardLayout() {
       {/* Navbar */}
       <Navbar />
 
-      {/* Content Area */}
+      {/* Main Layout */}
       <div className="flex">
+        {/* Sidebar */}
         <Sidebar />
 
-        <main className="flex-1 p-8">
-          <h1 className="text-3xl font-bold">
-            Welcome to DevBoard 🚀
-          </h1>
-
-          <p className="mt-2 text-slate-600">
-            Manage your projects and tasks efficiently.
-          </p>
+        {/* Page Content */}
+        <main className="flex-1 p-8 bg-slate-50">
+          <Outlet />
         </main>
       </div>
     </div>
