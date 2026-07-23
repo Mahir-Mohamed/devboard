@@ -11,7 +11,7 @@ import TasksPage from "../pages/Tasks/TasksPage";
 import ReportsPage from "../pages/Reports/ReportsPage";
 import SettingsPage from "../pages/Settings/SettingsPage";
 
-import LoginPage from "../pages/Login/LoginPage";
+import LoginPage from "../pages/Auth/LoginPage";
 import RegisterPage from "../pages/Register/RegisterPage";
 import ForgotPasswordPage from "../pages/ForgotPassword/ForgotPasswordPage";
 
