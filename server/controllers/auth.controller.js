@@ -73,6 +73,7 @@ export const loginUser = async (req, res) => {
         const token = jwt.sign(
             {
                 id: user._id,
+                role: user.role,
             },
             process.env.JWT_SECRET,
             {
@@ -100,4 +101,20 @@ export const loginUser = async (req, res) => {
         });
 
     }
+};
+
+export const getProfile = async (req, res) => {
+  try {
+    const user = await User.findById(req.user.id).select("-password");
+
+    res.status(200).json({
+      success: true,
+      user,
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
 };
