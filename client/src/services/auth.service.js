@@ -8,10 +8,6 @@ export const login = (credentials) => {
   return api.post("/auth/login", credentials);
 };
 
-export const getProfile = (token) => {
-  return api.get("/auth/profile", {
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  });
+export const getProfile = () => {
+  return api.get("/auth/profile");
 };
